@@ -1,0 +1,30 @@
+<header role="banner" class="head">
+  <div class="head__wrapper">
+    <div class="head__inner">
+      <a href="/" aria-label="{{site.name}}" class="head__logo">
+        {% include "partials/logo.svg" %}
+      </a>
+      <nav class="head__nav" aria-label="primary">
+        <ul class="nav__list">
+          {% for item in navigation.items %}
+          <li>
+            <a
+              href="{{ item.url }}"
+              {{
+              helpers.getLinkActiveState(item.url,
+              page.url)
+              |
+              safe
+              }}
+              >{{ item.text }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <button class="hamburger">
+        <img src="../../images/icons/hamburger.svg" alt="open menu">
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,30 @@
+.footer {
+  inline-size: 100%;
+  margin-top: 7.1875rem;
+  &__wrapper {
+    inline-size: 100%;
+  }
+
+  &__cta {
+    inline-size: 100%;
+    padding-inline: 2rem;
+
+    .cta {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: 2.5rem;
+
+      h2 {
+        font-size: 2.5rem;
+        line-height: 42px;
+        letter-spacing: -0.36px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__inner {
+  }
+}
