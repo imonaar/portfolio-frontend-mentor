@@ -1,0 +1,15 @@
+@mixin mobile {
+  @media (max-width: 30rem) { @content; }
+}
+
+@mixin tablet {
+  @media (min-width: 30.0625rem) { @content; }
+}
+
+@mixin tabonly {
+  @media (min-width: 30.0625rem) and (max-width: 60rem){ @content; }
+}
+
+@mixin desktop {
+  @media (min-width: 60.0625rem) { @content; }
+}

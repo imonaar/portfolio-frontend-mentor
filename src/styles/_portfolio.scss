@@ -1,0 +1,71 @@
+.portfolio {
+  inline-size: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+
+  &__wrapper {
+    inline-size: 100%;
+
+    @include tablet {
+      display: grid;
+      gap: 4.375rem;
+      grid-template-columns: 21.25rem 17.5rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include desktop{
+      grid-template-columns: 33.75rem 21.875rem;
+      gap: 7.8125rem;
+      justify-content: flex-start;
+    }
+
+    &.Bookmark,
+    &.Fylo {
+      @include tablet {
+        grid-template-columns: 17.5rem 21.25rem;
+
+        .portfolio__content {
+          grid-row: 1;
+        }
+      }
+
+      @include desktop{
+        grid-template-columns: 21.875rem 33.75rem ;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__image {
+    inline-size: 100%;
+    block-size: 18rem;
+    margin-bottom: 2rem;
+
+    @include tablet {
+      block-size: 19.625rem;
+    }
+
+    @include desktop{
+      block-size: 31.25rem;
+    }
+  }
+
+  &__content {
+    padding-block: 1.5rem;
+    border-block: 1px solid #33323d;
+
+    @include tablet {
+      padding-block: 2rem 3.125rem;
+    }
+
+    p {
+      margin-block: 1.5rem;
+
+      @include tablet {
+        margin-block: 2rem;
+      }
+    }
+  }
+}

@@ -1,29 +1,29 @@
 {% extends "layouts/base.html" %} {% block content %} {% set projects =
 pagination.items %}
 
-<div class="projects__container">
+<div class="project">
   {% for project in projects %}
-  <div class="project">
+  <div class=".container">
     <div class="project__wrapper">
       <div class="project__inner">
         <div class="project__hero">
           <picture>
             <source
-              media="(max-width: 768px)"
+              media="(max-width: 480px)"
               srcset="
                 {{project.data.detail.mobilehero}},
                 {{project.data.detail.mobileherotwo}} 2x
               "
             />
             <source
-              media="(max-width: 1020px)"
+              media="(max-width: 960px)"
               srcset="
                 {{project.data.detail.tablethero}},
                 {{project.data.detail.tabletherotwo}} 2x
               "
             />
             <source
-              media="(min-width: 1021px)"
+              media="(min-width: 961px)"
               srcset="
                 {{project.data.detail.desktophero}},
                 {{project.data.detail.desktopherotwo}} 2x
@@ -36,39 +36,42 @@ pagination.items %}
           </picture>
         </div>
         <section class="project__content">
-          <article>
+          <article class="top">
             <h2>{{project.data.title}}</h2>
             <p>{{project.data.summary}}</p>
-            <a class="btn" href="{{project.buttonUrl}}"> Visit Website </a>
+            <a class="btn btn-secondary" href="{{project.buttonUrl}}">
+              Visit Website
+            </a>
           </article>
 
-          <article>
+          <article class="bottom">
             <div class="project__background">
-              <h2>Project Background</h2>
+              <h3>Project Background</h3>
               <p>{{project.data.background}}</p>
             </div>
+
             <div class="project__preview">
               <div class="project__preview__header">
-                <h2>Static Previews</h2>
+                <h3>Static Previews</h3>
               </div>
               <div class="project__preview__images">
                 <picture>
                   <source
-                    media="(max-width: 768px)"
+                    media="(max-width: 480px)"
                     srcset="
                       {{project.data.detail.mobilepreviewtop}},
                       {{project.data.detail.mobilepreviewtoptwo}} 2x
                     "
                   />
                   <source
-                    media="(max-width: 1020px)"
+                    media="(max-width: 960px)"
                     srcset="
                       {{project.data.detail.tabletpreviewtop}},
                       {{project.data.detail.tabletpreviewtoptwo}} 2x
                     "
                   />
                   <source
-                    media="(min-width: 1021px)"
+                    media="(min-width: 961px)"
                     srcset="
                       {{project.data.detail.desktoppreviewtop}},
                       {{project.data.detail.desktoppreviewtoptwo}} 2x
@@ -81,21 +84,21 @@ pagination.items %}
                 </picture>
                 <picture>
                   <source
-                    media="(max-width: 768px)"
+                    media="(max-width: 480px)"
                     srcset="
                       {{project.data.detail.mobilepreviewbottom}},
                       {{project.data.detail.mobilepreviewbottomtwo}} 2x
                     "
                   />
                   <source
-                    media="(max-width: 1020px)"
+                    media="(max-width: 960px)"
                     srcset="
                       {{project.data.detail.tabletpreviewbottom}},
                       {{project.data.detail.tabletpreviewbottomtwo}} 2x
                     "
                   />
                   <source
-                    media="(min-width: 1021px)"
+                    media="(min-width: 961px)"
                     srcset="
                       {{project.data.detail.desktoppreviewbottom}},
                       {{project.data.detail.desktoppreviewbottomtwo}} 2x

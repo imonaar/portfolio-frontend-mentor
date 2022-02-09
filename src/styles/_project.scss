@@ -1,0 +1,77 @@
+.project {
+  inline-size: 100%;
+  .container {
+    inline-size: 100%;
+  }
+
+  &__wrapper {
+    inline-size: 100%;
+  }
+
+  &__inner {
+    inline-size: 100%;
+  }
+
+  &__hero {
+    block-size: 140px;
+    margin-bottom: 2.5rem;
+
+    @include tablet {
+      block-size: 19.375rem;
+    }
+
+    @include desktop {
+      block-size: 31.25rem;
+      margin-bottom: 7.1875rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    @include desktop {
+      display: grid;
+      grid-template-columns: 21.875rem 39.6875rem;
+      gap: 7.8125rem;
+      align-items: flex-start;
+    }
+
+    .top {
+      padding-block: 1.5rem;
+      border-block: 1px solid #33323d;
+
+      @include desktop{
+        padding-block: 3rem;
+      }
+
+      p {
+        margin-block: 1.5rem;
+      }
+    }
+
+    .bottom {
+      display: grid;
+      gap: 2.5rem;
+    }
+  }
+
+  &__background {
+    p {
+      margin-top: 1.75rem;
+    }
+  }
+
+  &__preview {
+    &__header {
+      margin-bottom: 2.5rem;
+    }
+
+    &__images {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}

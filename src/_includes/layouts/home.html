@@ -4,21 +4,21 @@
     <div class="intro__image">
       <picture>
         <source
-          media="(max-width: 768px)"
+          media="(max-width: 480px)"
           srcset="
             ../../images/homepage/mobile/image-homepage-hero.jpg,
             ../../images/homepage/mobile/image-homepage-hero@2x.jpg 2x
           "
         />
         <source
-          media="(max-width: 1020px)"
+          media="(max-width: 960px)"
           srcset="
             ../../images/homepage/tablet/image-homepage-hero.jpg,
             ../../images/homepage/tablet/image-homepage-hero@2x.jpg 2x
           "
         />
         <source
-          media="(min-width: 1021px)"
+          media="(min-width: 961px)"
           srcset="
             ../../images/homepage/desktop/image-homepage-hero.jpg,
             ../../images/homepage/desktop/image-homepage-hero@2x.jpg 2x
@@ -27,12 +27,13 @@
         <img
           src="../../images/homepage/mobile/image-homepage-hero.jpg"
           alt="image homepahe hero"
+        
         />
       </picture>
     </div>
     <div class="intro__content">
       <h1 class="intro__content__heading">{{intro.main}}</h1>
-      <a href="{{intro.buttonUrl}}" class="btn intro__btn">
+      <a href="#about" class="btn intro__btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
           <g fill="none" fill-rule="evenodd" stroke="#5FB4A2">
             <path d="M0 9l8 4 8-4" />
@@ -44,5 +45,5 @@
       </a>
     </div>
   </section>
-  {% include "partials/aboutme.html" %} {% endblock %}
+  {% include "partials/about.html" %} {% endblock %}
 </div>

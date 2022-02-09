@@ -7,11 +7,10 @@
 
   &__image {
     inline-size: 100%;
+    block-size: 18rem;
 
-    img {
-      max-block-size: 100%;
-      object-fit: cover;
-      object-position: center center;
+    @include tablet {
+      block-size: 37.5rem;
     }
   }
 
@@ -48,10 +47,22 @@
 .about {
   inline-size: 100%;
   margin-top: 6rem;
-  border-bottom: 1px solid #33323D;
+  
 
   &__wrapper {
     inline-size: 100%;
+
+    @include tablet{
+      display: grid;
+      grid-template-columns: 17.5625rem 20.6875rem;
+      gap: 4.375rem;
+    }
+
+    @include desktop{
+      grid-template-columns: 33.75rem 21.875rem;
+      gap: 7.8125rem;
+      justify-content: flex-start;
+    }
   }
 
   &__image {
@@ -62,6 +73,11 @@
     margin-top: 2rem;
     padding-block-start: 2rem;
     padding-block-end: 3.125rem;
+    border-block: 1px solid #33323d;
+
+    @include tablet{
+      margin-top: 0;
+    }
 
     h2 {
       font-size: 2.5rem;

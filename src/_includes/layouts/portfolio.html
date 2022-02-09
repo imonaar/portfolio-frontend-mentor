@@ -1,45 +1,43 @@
 {% extends "layouts/base.html" %} {% block content %}
 
-<div class="porfolio__container">
+<div class="portfolio">
   {% for project in collections.projects %}
-  <section class="portfolio">
-    <div class="portfolio__wrapper">
-      <div class="portfolio__image">
-        <picture>
-          <source
-            media="(max-width: 768px)"
-            srcset="
-              {{project.data.portfolio.mobileone}},
-              {{project.data.portfolio.mobiletwo}} 2x
-            "
-          />
-          <source
-            media="(max-width: 1020px)"
-            srcset="
-              {{project.data.portfolio.tabletone}},
-              {{project.data.portfolio.tablettwo}} 2x
-            "
-          />
-          <source
-            media="(min-width: 1021px)"
-            srcset="
-              {{project.data.portfolio.desktopone}},
-              {{project.data.portfolio.desktoptwo}} 2x
-            "
-          />
-          <img
-            src="{{project.data.portfolio.mobileone}}"
-            alt="portfolio homepage hero"
-          />
-        </picture>
-      </div>
-      <div class="portfolio__content">
-        <h2>{{project.data.title}}</h2>
-        <p>{{project.data.summary}}</p>
-        <a class="btn" href="{{project.data.buttonUrl}}">
-          {{project.data.buttonText}}
-        </a>
-      </div>
+  <section class="portfolio__wrapper {{project.data.title}}">
+    <div class="portfolio__image">
+      <picture>
+        <source
+          media="(max-width: 480px)"
+          srcset="
+            {{project.data.portfolio.mobileone}},
+            {{project.data.portfolio.mobiletwo}} 2x
+          "
+        />
+        <source
+          media="(max-width: 960px)"
+          srcset="
+            {{project.data.portfolio.tabletone}},
+            {{project.data.portfolio.tablettwo}} 2x
+          "
+        />
+        <source
+          media="(min-width: 961px)"
+          srcset="
+            {{project.data.portfolio.desktopone}},
+            {{project.data.portfolio.desktoptwo}} 2x
+          "
+        />
+        <img
+          src="{{project.data.portfolio.mobileone}}"
+          alt="portfolio homepage hero"
+        />
+      </picture>
+    </div>
+    <div class="portfolio__content">
+      <h2>{{project.data.title}}</h2>
+      <p>{{project.data.summary}}</p>
+      <a class="btn btn-secondary" href="{{project.data.buttonUrl}}">
+        {{project.data.buttonText}}
+      </a>
     </div>
   </section>
 
