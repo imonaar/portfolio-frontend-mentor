@@ -29,6 +29,10 @@ body {
 
   background: #f2f2f2;
   color: #33323d;
+
+  @include tablet{
+    padding-block: 4rem;
+  }
 }
 
 .main {
@@ -135,4 +139,8 @@ p {
   font-size: 1rem;
   line-height: 30px;
   font-weight: 400;
+}
+
+a{
+  text-decoration: none;
 }

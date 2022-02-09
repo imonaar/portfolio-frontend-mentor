@@ -1,34 +1,67 @@
-.head{
+.head {
   inline-size: 100%;
   margin-bottom: 2.5rem;
   block-size: 2rem;
 
-  &__wrapper{
+  @include tablet {
+    margin-bottom: 3rem;
+  }
+
+  @include desktop {
+    margin-bottom: 3.375rem;
+  }
+
+  &__wrapper {
     inline-size: 100%;
   }
 
-  &__inner{
+  &__inner {
     inline-size: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  &__logo{
+  &__logo {
     padding: 0;
     block-size: 100%;
     overflow: hidden;
   }
 
-  &__nav{
-    display: none;
+  &__nav {
+    @include mobile {
+      display: none;
+    }
   }
 
-  .hamburger{
+  .hamburger {
+    display: none;
     cursor: pointer;
     margin: 0;
     padding: 0;
     border: 0;
     background: none;
+
+    @include mobile {
+      display: block;
+    }
+  }
+}
+
+.nav__list {
+  display: flex;
+  gap: 42px;
+
+  a {
+    display: inline-block;
+    block-size: 2rem;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #33323d;
+
+    &[aria-current="page"]{
+      color: #5fb4a2;
+    }
   }
 }
