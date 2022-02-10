@@ -1,6 +1,7 @@
 module.exports = (config) => {
   config.addPassthroughCopy("./src/images/");
-   config.addWatchTarget("./src/styles/");
+  config.addPassthroughCopy("./src/scripts/index.js");
+  config.addWatchTarget("./src/styles/");
   config.addCollection("projects", (collection) => {
     return collection.getFilteredByGlob("./src/projects/*.md");
   });

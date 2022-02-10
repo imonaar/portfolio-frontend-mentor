@@ -1,5 +1,5 @@
 ---
-title: "insure"
+title: "Insure"
 tags: posts
 summary: "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section."
 hero:

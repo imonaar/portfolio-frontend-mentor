@@ -83,12 +83,12 @@
 
     @include tablet {
       display: grid;
-      grid-template-columns: 17.5625rem 20.6875rem;
+        grid-template-columns: 4.5fr 5.5fr;
       gap: 4.375rem;
     }
 
     @include desktop {
-      grid-template-columns: 33.75rem 21.875rem;
+      grid-template-columns: 6fr 4fr;
       gap: 7.8125rem;
       justify-content: flex-start;
     }

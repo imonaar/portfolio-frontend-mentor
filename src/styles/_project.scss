@@ -33,8 +33,9 @@
 
     @include desktop {
       display: grid;
-      grid-template-columns: 21.875rem 39.6875rem;
-      gap: 7.8125rem;
+      grid-template-columns: 3.5fr 6.5fr;
+      gap: 6rem;
+      justify-content: space-between;
       align-items: flex-start;
     }
 

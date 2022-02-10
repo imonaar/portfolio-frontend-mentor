@@ -10,13 +10,13 @@
     @include tablet {
       display: grid;
       gap: 4.375rem;
-      grid-template-columns: 21.25rem 17.5rem;
+      grid-template-columns: 5.5fr 4.5fr;
       justify-content: space-between;
       align-items: center;
     }
 
     @include desktop{
-      grid-template-columns: 33.75rem 21.875rem;
+      grid-template-columns: 6fr 4fr;
       gap: 7.8125rem;
       justify-content: flex-start;
     }
@@ -24,7 +24,7 @@
     &.Bookmark,
     &.Fylo {
       @include tablet {
-        grid-template-columns: 17.5rem 21.25rem;
+        grid-template-columns: 4.5fr 5.5fr;
 
         .portfolio__content {
           grid-row: 1;
@@ -32,7 +32,7 @@
       }
 
       @include desktop{
-        grid-template-columns: 21.875rem 33.75rem ;
+        grid-template-columns: 4fr 6fr ;
         justify-content: flex-end;
       }
     }

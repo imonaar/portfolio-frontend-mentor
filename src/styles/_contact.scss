@@ -1,4 +1,13 @@
 .contact {
+  margin-block-end: 5rem;
+
+  @include tablet {
+    margin-block-end: 6rem;
+  }
+
+  @include desktop {
+    margin-block-end: 9.375rem;
+  }
   &__wrapper {
     article {
       padding-block: 1.5rem 2rem;
@@ -37,7 +46,7 @@
 
         span {
           font-weight: 700;
-          font-size: .8125rem;
+          font-size: 0.8125rem;
           line-height: 30px;
           color: #33323d;
         }
