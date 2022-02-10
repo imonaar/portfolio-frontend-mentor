@@ -30,7 +30,7 @@ body {
   background: #f2f2f2;
   color: #33323d;
 
-  @include tablet{
+  @include tablet {
     padding-block-start: 4rem;
   }
 }
@@ -39,7 +39,7 @@ body {
   inline-size: 100%;
 }
 
-.container{
+.container {
   inline-size: 100%;
 }
 
@@ -112,6 +112,9 @@ li {
   display: inline-block;
 
   &-primary {
+    background-color: #203a4c;
+    color: white;
+    padding: 1rem 1.5rem;
   }
 
   &-secondary {
@@ -146,7 +149,7 @@ p {
   font-weight: 400;
 }
 
-a{
+a {
   text-decoration: none;
   white-space: nowrap;
 }
