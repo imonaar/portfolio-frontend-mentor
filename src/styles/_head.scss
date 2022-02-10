@@ -26,11 +26,14 @@
     padding: 0;
     block-size: 100%;
     overflow: hidden;
+    color: #33323d;
   }
 
   &__nav {
-    @include mobile {
-      display: none;
+    &.mobile {
+      @include mobile {
+        display: none;
+      }
     }
   }
 
@@ -60,7 +63,7 @@
     text-transform: uppercase;
     color: #33323d;
 
-    &[aria-current="page"]{
+    &[aria-current="page"] {
       color: #5fb4a2;
     }
   }

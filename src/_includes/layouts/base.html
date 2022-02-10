@@ -15,12 +15,14 @@
     <title>{{title}}</title>
   </head>
   <body>
-    <div class="content">
-      {% include "partials/site-head.html" %}
-      <main tabindex="-1" id="main-content" class="main">
-        {% block content %}{% endblock %}
-      </main>
+    <div class="container">
+      <div class="content">
+        {% include "partials/site-head.html" %}
+        <main tabindex="-1" id="main-content" class="main">
+          {% block content %}{% endblock %}
+        </main>
+      </div>
+      {% include "partials/footer.html" %}
     </div>
-    {% include "partials/footer.html" %}
   </body>
 </html>

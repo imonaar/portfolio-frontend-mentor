@@ -18,7 +18,7 @@
   &__content {
     margin-top: 1.5rem;
 
-    @include tablet{
+    @include tablet {
       padding: 0;
       inline-size: 514px;
       block-size: 278px;
@@ -32,13 +32,24 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      
+    }
+
+    @include desktop{
+      inline-size: 27.8125rem;
+      block-size: 22.3125rem;
     }
     h1 {
       font-size: 2.5rem;
       line-height: 42px;
       letter-spacing: -0.36px;
       max-inline-size: 20ch;
+
+      @include desktop{
+        font-size: 3.125rem;
+        line-height: 50px;
+        letter-spacing: -0.45px;
+        max-inline-size: 13ch;
+      }
     }
   }
 
@@ -65,19 +76,18 @@
 .about {
   inline-size: 100%;
   margin-top: 6rem;
-  
 
   &__wrapper {
     inline-size: 100%;
     position: relative;
 
-    @include tablet{
+    @include tablet {
       display: grid;
       grid-template-columns: 17.5625rem 20.6875rem;
       gap: 4.375rem;
     }
 
-    @include desktop{
+    @include desktop {
       grid-template-columns: 33.75rem 21.875rem;
       gap: 7.8125rem;
       justify-content: flex-start;
@@ -94,9 +104,8 @@
     padding-block-end: 3.125rem;
     border-block: 1px solid #33323d;
 
-    @include tablet{
+    @include tablet {
       margin-top: 0;
-     
     }
 
     h2 {

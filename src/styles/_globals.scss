@@ -23,7 +23,7 @@ body {
   justify-content: center;
   flex-direction: column;
 
-  padding-block: 2rem;
+  padding-block-start: 2rem;
 
   font-family: "Public Sans", sans-serif;
 
@@ -31,7 +31,7 @@ body {
   color: #33323d;
 
   @include tablet{
-    padding-block: 4rem;
+    padding-block-start: 4rem;
   }
 }
 
@@ -39,10 +39,17 @@ body {
   inline-size: 100%;
 }
 
+.container{
+  inline-size: 100%;
+}
+
 .content {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  inline-size: 100%;
+  max-inline-size: 69.375rem;
+  margin: 0 auto;
 
   padding-inline: 2rem;
 
@@ -50,9 +57,9 @@ body {
     padding-inline: 2.5rem;
   }
 
-  @include desktop {
-    padding-inline: 10.3125rem;
-  }
+  // @include desktop {
+  //   padding-inline: 10.3125rem;
+  // }
 }
 
 //remember this declaration. Solved all the Image headaches!!!!!
@@ -69,9 +76,7 @@ picture img {
   width: 100%;
 }
 
-picture {
-  block-size: 100%;
-}
+//https://stackoverflow.com/questions/47888165/make-image-in-picture-element-fit-its-container
 
 h1,
 h2,
@@ -143,4 +148,5 @@ p {
 
 a{
   text-decoration: none;
+  white-space: nowrap;
 }

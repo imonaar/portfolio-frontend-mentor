@@ -1,28 +1,45 @@
 <footer class="footer">
   <div class="footer__wrapper">
     <div class="footer__cta">{% include "partials/cta.html" %}</div>
-    <div class="head__inner">
-      <a href="/" aria-label="{{site.name}}" class="head__logo">
-        {% include "partials/logo.svg" %}
-      </a>
-      <nav class="head__nav" aria-label="primary">
-        <ul class="nav__list">
-          {% for item in navigation.items %}
-          <li>
-            <a
-              href="{{ item.url }}"
-              {{
-              helpers.getLinkActiveState(item.url,
-              page.url)
-              |
-              safe
-              }}
-              >{{ item.text }}</a
-            >
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
+    <div class="footer__nav">
+      <div class="footer__nav__container">
+        <div class="head__inner">
+          <a href="/" aria-label="{{site.name}}" class="head__logo">
+            {% include "partials/logo.svg" %}
+          </a>
+          <nav class="head__nav" aria-label="primary">
+            <ul class="nav__list">
+              {% for item in navigation.items %}
+              <li>
+                <a
+                  href="{{ item.url }}"
+                  {{
+                  helpers.getLinkActiveState(item.url,
+                  page.url)
+                  |
+                  safe
+                  }}
+                  >{{ item.text }}</a
+                >
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__social">
+          <ul>
+            <li>
+              <a href="#"> {% include "partials/github.svg" %} </a>
+            </li>
+            <li>
+              <a href="#"> {% include "partials/twitter.svg" %} </a>
+            </li>
+            <li>
+              <a href="#"> {% include "partials/linkedin.svg" %} </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
