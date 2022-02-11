@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
 
   &__logo {
@@ -29,24 +30,44 @@
     color: #33323d;
   }
 
-  &__nav {
-    &.mobile {
+  .head__nav {
+    @include mobile {
+      position: absolute;
+      right: 0;
+      top: 48px;
+      inline-size: 100%;
+      background-color: #33323d;
+      padding-block: 40px;
+      opacity: 0;
+      z-index: 100;
+
+    }
+
+    &.open {
+      opacity: 1;
+    }
+
+    .nav__list {
       @include mobile {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
       }
     }
-  }
 
-  .hamburger {
-    display: none;
-    cursor: pointer;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: none;
+    li {
+      @include mobile {
+      }
+    }
 
-    @include mobile {
-      display: block;
+    a {
+      @include mobile {
+        color: white;
+        font-size: 0.75rem;
+        line-height: 14px;
+        letter-spacing: 2px;
+      }
     }
   }
 }
@@ -65,6 +86,67 @@
 
     &[aria-current="page"] {
       color: #5fb4a2;
+    }
+  }
+}
+
+.menu {
+  @include tablet {
+    display: none;
+  }
+}
+
+.hamburger {
+  block-size: 1.25rem;
+  inline-size: 1.25rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+
+  display: grid;
+  place-content: center;
+
+  position: relative;
+
+  .line {
+    position: absolute;
+    display: block;
+    background: #3d3d3d;
+    width: 18px;
+    height: 0.15rem;
+    border-radius: 0.2rem;
+    transition: all 0.6s cubic-bezier(0.5, 0.1, 0, 1.2);
+  }
+  .line-1 {
+    top: 0;
+  }
+
+  .line-2 {
+    top: 7px;
+    width: 14px;
+    transform: translateX(2px);
+    -webkit-transform: translateX(2px);
+  }
+
+  .line-3 {
+    top: 14px;
+  }
+
+  &.open {
+    .line-1 {
+      top: 0px;
+      width: 22px;
+      transform: translateX(-11px) rotate(-45deg) translateY(12px);
+    }
+
+    .line-2 {
+      opacity: 0;
+    }
+
+    .line-3 {
+      top: 14px;
+      width: 22px;
+      transform: translateX(-8px) rotate(45deg) translateY(-8px);
     }
   }
 }

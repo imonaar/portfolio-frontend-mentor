@@ -1,4 +1,12 @@
 const form = document.querySelector("#form");
+const menu = document.querySelector("#menu");
+const jsNav = document.querySelector(".js-nav");
+
+
+menu.addEventListener('click', ()=>{
+  menu.classList.toggle('open')
+  jsNav.classList.toggle('open')
+})
 
 if (form) {
   form.addEventListener("submit", (e) => {
