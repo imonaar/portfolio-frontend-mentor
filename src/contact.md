@@ -1,3 +1,4 @@
 ---
-layout: 'layouts/contact.html'
+layout: "layouts/contact.html"
+title: "contact me"
 ---

@@ -1,3 +1,4 @@
 ---
-layout: 'layouts/portfolio.html'
+layout: "layouts/portfolio.html"
+title: "portfolio"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Hello, world"
+title: "My Porfolio"
 layout: "layouts/home.html"
 intro:
   main: "Hey, I’m Alex Spencer and I love building beautiful websites"
