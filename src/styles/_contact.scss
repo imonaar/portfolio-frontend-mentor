@@ -40,24 +40,28 @@
       display: grid;
       gap: 1.5rem;
 
-      label {
+      div {
         display: grid;
         gap: 8px;
 
-        span {
+        label {
           font-weight: 700;
           font-size: 0.8125rem;
           line-height: 30px;
           color: #33323d;
         }
 
-        input[type="text"],
+        input,
         textarea {
           padding: 0.625rem 1rem;
           inline-size: 100%;
           border: 0;
           background-color: #e6e6e7;
           font-family: "Public Sans", sans-serif;
+        }
+
+        .validation-message{
+          color: red;
         }
       }
 
