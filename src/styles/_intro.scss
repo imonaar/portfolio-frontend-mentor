@@ -52,25 +52,6 @@
       }
     }
   }
-
-  &__btn {
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    line-height: 0.875rem;
-    letter-spacing: 2px;
-    font-weight: 400;
-    padding: 1rem;
-    width: 12.5rem;
-    background-color: #203a4c;
-    color: white;
-    margin-top: 2rem;
-
-    svg {
-      margin-right: 2rem;
-    }
-  }
 }
 
 .about {
@@ -102,7 +83,7 @@
     margin-top: 2rem;
     padding-block-start: 2rem;
     padding-block-end: 3.125rem;
-    border-block: 1px solid #33323d;
+    border-block: var(--border);
 
     @include tablet {
       margin-top: 0;

@@ -15,7 +15,7 @@
       align-items: center;
     }
 
-    @include desktop{
+    @include desktop {
       grid-template-columns: 6fr 4fr;
       gap: 7.8125rem;
       justify-content: flex-start;
@@ -31,8 +31,8 @@
         }
       }
 
-      @include desktop{
-        grid-template-columns: 4fr 6fr ;
+      @include desktop {
+        grid-template-columns: 4fr 6fr;
         justify-content: flex-end;
       }
     }
@@ -47,14 +47,14 @@
       block-size: 19.625rem;
     }
 
-    @include desktop{
+    @include desktop {
       block-size: 31.25rem;
     }
   }
 
   &__content {
     padding-block: 1.5rem;
-    border-block: 1px solid #33323d;
+    border-block: var(--border);
 
     @include tablet {
       padding-block: 2rem 3.125rem;

@@ -1,13 +1,14 @@
 {# Only renders this section if there are links to render #}
 {% if pagination.href.next or pagination.href.previous %}
-  <footer>
-    <div class="wrapper">
+  <div class="pagination">
+    <div class="pagination__wrapper">
       <nav class="pagination__inner" aria-label="Pagination links">
         {% if pagination.href.previous %}
           <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
             <span>Previous Project </span>
           </a>
         {% endif %}
+        
         {% if pagination.href.next %}
           <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
             <span> Next Project </span>
@@ -15,5 +16,5 @@
         {% endif %}
       </nav>
     </div>
-  </footer>
+  </div>
 {% endif %}

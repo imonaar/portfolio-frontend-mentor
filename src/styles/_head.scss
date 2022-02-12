@@ -27,7 +27,7 @@
     padding: 0;
     block-size: 100%;
     overflow: hidden;
-    color: #33323d;
+    color: var(--link);
   }
 
   .head__nav {
@@ -36,11 +36,10 @@
       right: 0;
       top: 48px;
       inline-size: 100%;
-      background-color: #33323d;
+      background-color: var(--link);
       padding-block: 40px;
       opacity: 0;
       z-index: 100;
-
     }
 
     &.open {
@@ -82,10 +81,14 @@
     display: flex;
     align-items: center;
     text-transform: uppercase;
-    color: #33323d;
+    color: var(--link);
+
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    letter-spacing: 2px;
 
     &[aria-current="page"] {
-      color: #5fb4a2;
+      color: var(--active);
     }
   }
 }
@@ -111,7 +114,7 @@
   .line {
     position: absolute;
     display: block;
-    background: #3d3d3d;
+    background: var(--bg-3);
     width: 18px;
     height: 0.15rem;
     border-radius: 0.2rem;

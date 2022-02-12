@@ -41,9 +41,9 @@
 
     .top {
       padding-block: 1.5rem;
-      border-block: 1px solid #33323d;
+      border-block: var(--border);
 
-      @include desktop{
+      @include desktop {
         padding-block: 3rem;
       }
 

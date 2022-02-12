@@ -41,7 +41,7 @@
         @include tablet {
           inline-size: 113px;
           block-size: 1px;
-          background-color: #33323d;
+          background-color: var(--separator);
           opacity: 0.15;
         }
 

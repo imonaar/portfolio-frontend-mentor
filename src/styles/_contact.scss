@@ -11,7 +11,7 @@
   &__wrapper {
     article {
       padding-block: 1.5rem 2rem;
-      border-block: 1px solid #33323d;
+      border-block: var(--border);
       display: grid;
       gap: 1.5rem;
 
@@ -48,7 +48,6 @@
           font-weight: 700;
           font-size: 0.8125rem;
           line-height: 30px;
-          color: #33323d;
         }
 
         input,
@@ -56,12 +55,12 @@
           padding: 0.625rem 1rem;
           inline-size: 100%;
           border: 0;
-          background-color: #e6e6e7;
+          background-color: var(--bg-input);
           font-family: "Public Sans", sans-serif;
         }
 
-        .validation-message{
-          color: red;
+        .validation-message {
+          color: var(--error);
         }
       }
 
@@ -80,6 +79,6 @@
     gap: 1rem;
   }
   a {
-    color: #33323d;
+    color: var(--text-1);
   }
 }
