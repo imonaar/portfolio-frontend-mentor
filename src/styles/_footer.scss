@@ -14,7 +14,7 @@
 
   &__container {
     inline-size: 100%;
-    max-inline-size: 69.375rem;
+    max-inline-size: var(--max-width);
     padding-inline: 2rem;
     padding-block: 3.5rem;
     display: flex;
@@ -28,6 +28,7 @@
       margin: 0 auto;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
 
     .head__inner {
@@ -70,6 +71,18 @@
   justify-content: center;
   ul {
     display: flex;
+    align-items: center;
     gap: 1rem;
+
+    li{
+      display: inline-flex;
+     align-items: center;
+    }
+
+   a{
+     block-size: 100%;
+     display: inline-flex;
+     align-items: center;
+   }
   }
 }
