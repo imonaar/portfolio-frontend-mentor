@@ -189,11 +189,13 @@ a {
     background-color: var(--link);
     padding-block: 40px;
     opacity: 0;
+    pointer-events: none;
     z-index: 100;
   }
 }
 .head .head__nav.open {
   opacity: 1;
+  pointer-events: auto;
 }
 @media (max-width: 45.8125rem) {
   .head .head__nav .nav__list {
@@ -557,6 +559,13 @@ a {
     margin-bottom: 7.1875rem;
   }
 }
+.project__tags {
+  color: var(--active);
+  margin-bottom: 1.5rem;
+}
+.project__tags a {
+  color: inherit;
+}
 .project__content {
   display: flex;
   flex-direction: column;
@@ -766,6 +775,9 @@ a {
   color: inherit;
   font-size: 1rem;
   line-height: 30px;
+}
+.pagination__inner a:first-child {
+  text-align: left;
 }
 .pagination__inner a:last-child {
   text-align: right;

@@ -1,10 +1,11 @@
 ---
 title: "Bookmark"
-tags: posts
+
 summary: "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section."
 hero:
-  images: "../images/portfolio/desktop/image-portfolio-manage.jpg"
-  imageAlt: "Manage hero image"
+  imageAlt: " hero image"
+
+tags: ["Interaction Design", "Front End Development", "HTML", "CSS", "JS"]
 
 portfolio:
   mobileone: "../images/portfolio/mobile/image-portfolio-bookmark.jpg"

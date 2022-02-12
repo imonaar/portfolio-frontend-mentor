@@ -1,10 +1,12 @@
 ---
 title: "Manage"
-tags: posts
+
 summary: "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider."
 hero:
-  image: "../images/portfolio/desktop/image-portfolio-manage.jpg"
-  imageAlt: "Manage hero image"
+  imageAlt: "image"
+
+tags: ["Interaction Design", "Front End Development", "HTML", "CSS", "JS"]
+
 portfolio:
   mobileone: "../images/portfolio/mobile/image-portfolio-manage.jpg"
   mobiletwo: "../images/portfolio/mobile/image-portfolio-manage@2x.jpg"

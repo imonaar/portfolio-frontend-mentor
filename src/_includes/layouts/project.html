@@ -2,7 +2,7 @@
 pagination.items %}
 
 <div class="project">
-  {% for project in projects %}
+  {% for project in projects %} {{ project.data.tags | log}}
   <div class=".container">
     <div class="project__wrapper">
       <div class="project__inner">
@@ -31,7 +31,7 @@ pagination.items %}
             />
             <img
               src="{{project.data.detail.mobilehero}}"
-              alt="portfolio homepage hero"
+              alt="{{project.data.title}} hero image"
             />
           </picture>
         </div>
@@ -39,6 +39,17 @@ pagination.items %}
           <article class="top">
             <h2>{{project.data.title}}</h2>
             <p>{{project.data.summary}}</p>
+            <div class="project__tags">
+              <div>
+                <a href="#">{{project.data.tags[0]}}</a> /
+                <a href="#">{{project.data.tags[1]}}</a>
+              </div>
+              <div>
+                <a href="#">{{project.data.tags[2]}}</a> /
+                <a href="#">{{project.data.tags[3]}}</a> /
+                <a href="#">{{project.data.tags[4]}}</a>
+              </div>
+            </div>
             <a class="btn btn-secondary" href="{{project.buttonUrl}}">
               Visit Website
             </a>
@@ -79,7 +90,7 @@ pagination.items %}
                   />
                   <img
                     src="{{project.data.detail.mobilepreviewtop}}"
-                    alt="portfolio homepage hero"
+                    alt="{{project.data.title}} preview image"
                   />
                 </picture>
                 <picture>
@@ -106,7 +117,7 @@ pagination.items %}
                   />
                   <img
                     src="{{project.data.detail.mobilepreviewbottom}}"
-                    alt="portfolio homepage hero"
+                    alt="{{project.data.title}} preview image"
                   />
                 </picture>
               </div>

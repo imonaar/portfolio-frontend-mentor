@@ -26,6 +26,15 @@
     }
   }
 
+  &__tags {
+    color: var(--active);
+    margin-bottom: 1.5rem;
+
+    a {
+      color: inherit;
+    }
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
