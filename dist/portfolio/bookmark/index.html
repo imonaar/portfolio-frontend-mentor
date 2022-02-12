@@ -25,7 +25,7 @@
         <svg aria-hidden="true" focusable="false" width="61" height="32"><path fill="currentColor" fill-rule="evenodd" d="M60.082 5.878L44.408 32 28.735 5.878h31.347zM15.673 0l15.674 26.122H0L15.673 0z"/></svg>
       </a>
       <nav class="head__nav js-nav" aria-label="primary">
-        <ul class="nav__list">
+        <ul class="nav__list menu">
           
           <li>
             <a
@@ -53,8 +53,13 @@
           
         </ul>
       </nav>
-      <div class="menu">
-        <button class="hamburger" id="menu">
+      <div class="toggle-container">
+        <button
+          class="toggle"
+          id="toggle"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
           <span class="line line-1"></span>
           <span class="line line-2"></span>
           <span class="line line-3"></span>
@@ -63,6 +68,8 @@
     </div>
   </div>
 </header>
+
+<!-- https://www.a11ymatters.com/pattern/mobile-nav/ -->
 
         <main tabindex="-1" id="main-content" class="main">
            
@@ -196,17 +203,21 @@
   <div class="pagination">
     <div class="pagination__wrapper">
       <nav class="pagination__inner" aria-label="Pagination links">
+        <div>
         
           <a href="/portfolio/manage/#post-list" data-direction="backwards">
             <span>Previous Project </span>
           </a>
         
+        </div>
+        <div>
         
         
           <a href="/portfolio/insure/#post-list" data-direction="forwards">
             <span> Next Project </span>
           </a>
         
+        </div>
       </nav>
     </div>
   </div>

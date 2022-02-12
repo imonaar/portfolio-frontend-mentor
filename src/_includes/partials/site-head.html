@@ -5,7 +5,7 @@
         {% include "partials/logo.svg" %}
       </a>
       <nav class="head__nav js-nav" aria-label="primary">
-        <ul class="nav__list">
+        <ul class="nav__list menu">
           {% for item in navigation.items %}
           <li>
             <a
@@ -22,8 +22,13 @@
           {% endfor %}
         </ul>
       </nav>
-      <div class="menu">
-        <button class="hamburger" id="menu">
+      <div class="toggle-container">
+        <button
+          class="toggle"
+          id="toggle"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
           <span class="line line-1"></span>
           <span class="line line-2"></span>
           <span class="line line-3"></span>
@@ -32,3 +37,5 @@
     </div>
   </div>
 </header>
+
+<!-- https://www.a11ymatters.com/pattern/mobile-nav/ -->

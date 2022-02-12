@@ -3,6 +3,7 @@
   margin-bottom: 2.5rem;
   block-size: 2rem;
 
+
   @include tablet {
     margin-bottom: 3rem;
   }
@@ -95,13 +96,13 @@
   }
 }
 
-.menu {
+.toggle-container {
   @include tablet {
     display: none;
   }
 }
 
-.hamburger {
+.toggle {
   block-size: 1.25rem;
   inline-size: 1.25rem;
   cursor: pointer;

@@ -234,12 +234,12 @@ a {
 }
 
 @media (min-width: 45.875rem) {
-  .menu {
+  .toggle-container {
     display: none;
   }
 }
 
-.hamburger {
+.toggle {
   block-size: 1.25rem;
   inline-size: 1.25rem;
   cursor: pointer;
@@ -249,7 +249,7 @@ a {
   place-content: center;
   position: relative;
 }
-.hamburger .line {
+.toggle .line {
   position: absolute;
   display: block;
   background: var(--bg-3);
@@ -258,27 +258,27 @@ a {
   border-radius: 0.2rem;
   transition: all 0.6s cubic-bezier(0.5, 0.1, 0, 1.2);
 }
-.hamburger .line-1 {
+.toggle .line-1 {
   top: 0;
 }
-.hamburger .line-2 {
+.toggle .line-2 {
   top: 7px;
   width: 14px;
   transform: translateX(2px);
   -webkit-transform: translateX(2px);
 }
-.hamburger .line-3 {
+.toggle .line-3 {
   top: 14px;
 }
-.hamburger.open .line-1 {
+.toggle.open .line-1 {
   top: 0px;
   width: 22px;
   transform: translateX(-11px) rotate(-45deg) translateY(12px);
 }
-.hamburger.open .line-2 {
+.toggle.open .line-2 {
   opacity: 0;
 }
-.hamburger.open .line-3 {
+.toggle.open .line-3 {
   top: 14px;
   width: 22px;
   transform: translateX(-8px) rotate(45deg) translateY(-8px);
@@ -759,26 +759,24 @@ a {
   grid-template-columns: 1fr 1fr;
   color: var(--text-2);
   border-block: var(--border);
-  padding-block: 2rem;
   position: relative;
 }
-.pagination__inner::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  inline-size: 1px;
+.pagination__inner div {
   block-size: 100%;
-  background-color: var(--text-2);
+  padding-block: 2rem;
+}
+.pagination__inner div:first-child {
+  border-right: var(--border);
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+.pagination__inner div:last-child {
+  display: flex;
+  justify-content: flex-end;
 }
 .pagination__inner a {
   color: inherit;
   font-size: 1rem;
   line-height: 30px;
-}
-.pagination__inner a:first-child {
-  text-align: left;
-}
-.pagination__inner a:last-child {
-  text-align: right;
 }

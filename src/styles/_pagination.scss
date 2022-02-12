@@ -13,29 +13,30 @@
     color: var(--text-2);
 
     border-block: var(--border);
-    padding-block: 2rem;
+
     position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      inline-size: 1px;
+    div {
       block-size: 100%;
-      background-color: var(--text-2);
+      padding-block: 2rem;
+      &:first-child {
+        border-right: var(--border);
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        
+      }
+
+      &:last-child {
+        display: flex;
+        justify-content: flex-end;
+      }
     }
 
     a {
       color: inherit;
       font-size: 1rem;
       line-height: 30px;
-      &:first-child {
-        text-align: left;
-      }
-      &:last-child {
-        text-align: right;
-      }
     }
   }
 }
